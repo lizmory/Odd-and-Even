@@ -1,0 +1,6 @@
+print("This program sorts the numbers entered by the user in two lists.\nIn one list are the even numbers and in the other the odd numbers")
+print("Enter the list of numbers you want to sort into even and odd numbers.\nNumbers must be separated by a comma (,) and a space")
+print("This is an example of a correct entry: 1, 3, 67, 100, -3")
+print("This is an example of a incorrect entry. 1,3, 67,100, -3\n\n\n")
+
+print("Your list of number: ")
