@@ -1,19 +1,49 @@
+#Adriana Lizmory Cuellar (Liz Cuellar) 
+#student number 8672198
+#This code display all odd and all even numbers as two lists of numbers.
+
 print("This program sorts the numbers entered by the user in two lists.\nIn one list are the even numbers and in the other the odd numbers")
 print("Enter the list of numbers you want to sort into even and odd numbers.\nNumbers must be separated by a comma (,) and a space")
 print("This is an example of a correct entry: 1, 3, 67, 100, -3")
 print("This is an example of a incorrect entry. 1,3, 67,100, -3\n\n\n")
 
+
 print("Your list of number: ")
-entry = input() #the input is saved in a string
+entry = input() #The input is saved in a string
 
 stringList = entry.split(", ") #the separated values are saved in a list of strings using the split method and the string ", " as a separator
 
 intList = [] #an empty list is declared
 
-i = 0
+i = 0 # the iterator is initialized to 0 
 
-while i < len(stringList): # loop len - 1 times to ensure traversing the entire stringList
 
-    intList.append(int(stringList[i])) #is added to intList element by element of stringList
-    i+=1                               #before adding to intList, each element of stringList is converted to type int
+                            #This while allows to fill "intList" passing values converted from "stringList" elements 
+while i < len(stringList):  # len method allows to ontain the length of "stringList"
+                            # loop len less(-) 1 times to ensure traversing the entire stringList
 
+    intList.append(int(stringList[i])) #is added to intList element by element of stringList using append method
+    i += 1                             #before adding to intList, each element of stringList is converted to type int. Finally add 1 to i variable
+
+
+even = [] # two empty list are declared... 
+odds = [] #...to save even and odds numbers
+
+
+i = 0 # iterator is declared to traversing "intList" started in 0 position until last position
+
+                        
+while i < len(intList): #This while traversing the full "intList" to clasify the even numbers an odd numbers
+    
+    if intList[i]%2 == 0: #evaluates if the value stored in item intList[i] is an even number
+        even.append(intList[i]) #if the even number condition is satisfied, it is stored in the last available position in the even list using append methode
+    else:
+        odds.append(intList[i]) #otherwise it is stored in odds list using append method 
+    i += 1 # i variable is increase by 1 to itetor at the next position in the list "intList"
+ 
+# Finally the list result are printer
+print("\neven numbers: ") 
+print(even) #Print of even list
+
+print("\nnodd numbers: ")
+print(odds) #Print of odd list
